@@ -30,3 +30,17 @@ if resp.status_code==200:
     print(resp.json())
 ```
 
+
+## Links
+### API User
+* <a href="https://github.com/NMWDI">NMWDI Project</a> - Link to the NMWDI GitHub Organization page
+* <a href="https://developers.sensorup.com/">SensorThings Developer Center</a>
+* <a href="https://developers.sensorup.com/docs/#introduction">SensorThings Documentation</a>
+* <a href="https://fraunhoferiosb.github.io/FROST-Server/">FROST Server</a> - An implementation of the
+   SensorThings specification
+* <a href="https://github.com/FraunhoferIOSB/FROST-Python-Client">FROST Python Client</a> - A python client
+   for interacting with a FROST server
+
+### Non-API User
+* <a href="https://newmexicowaterdata.org">New Mexico Water Data Home Page</a>
+* <a href="https://catalog.newmexicowaterdata.org">New Mexico Water Data Catalog</a>
