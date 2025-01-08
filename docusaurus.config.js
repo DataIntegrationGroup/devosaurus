@@ -8,9 +8,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Data Integration Group Documentation Site',
-  tagline: 'Data Integration is Cool',
-  favicon: 'img/favicon.ico',
+  title: 'New Mexico Water Data Documentation Site',
+  tagline: 'Water Data is Cool',
+  favicon: 'img/nmwdi_favicon.png',
 
   // Set the production url of your site here
   url: 'https://developer.newmexicowaterdata.org',
@@ -74,7 +74,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Data Integration Group',
+        title: 'Home',
         logo: {
           alt: 'NMWDI Logo',
           src: 'img/nmwdi_logo11-23.png',
@@ -84,7 +84,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -101,7 +101,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Intro',
                 to: '/docs/intro',
               },
             ],
@@ -110,29 +110,29 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Slack',
+                href: 'https://new-mexico-water-data.slack.com',
               },
+              // {
+              //   label: 'Discord',
+              //   href: 'https://discordapp.com/invite/docusaurus',
+              // },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'NMWDI',
+                href: 'https://newmexicowaterdata.org',
               },
             ],
           },
           {
             title: 'More',
             items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'NMWDI GitHub',
+                href: 'https://github.com/NMWDI',
+              },
+              {
+                label: 'Data Integration Group GitHub',
+                href: 'https://github.com/DataIntegrationGroup',
               },
             ],
           },

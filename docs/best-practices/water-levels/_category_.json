@@ -1,0 +1,8 @@
+{
+  "label": "Groundwater Levels",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Best practices for sharing groundwater levels with NMWDI."
+  }
+}

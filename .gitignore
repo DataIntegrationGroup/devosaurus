@@ -1,6 +1,7 @@
 # Dependencies
 /node_modules
 
+deploy.sh
 app.yaml
 # Production
 /build
