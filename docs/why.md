@@ -3,9 +3,17 @@ sidebar_position: 1
 ---
 
 # Why
+    The New Mexico Water Data Initiative (NMWDI) has developed multiple core tools: 
+
+    1. AMP API
+    2. Weaver
+    3. Data Integration Engine (DIE)
+    
+    Each of these tools serves a specific purpose and is designed to work together to provide a comprehensive set of data services to users.
+    
 
 ## Why AMP API
-    1. Provicdes a single point of access to all data in NMAquifer
+    1. Provides a single point of access to all data in NMAquifer
 
 ## Why Weaver
     1. Modern component-based web application using React   
