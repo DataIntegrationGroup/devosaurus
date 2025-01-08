@@ -1,0 +1,152 @@
+---
+sidebar_position: 1
+---
+
+# Data Specification
+
+<div style={{backgroundColor: 'lightblue', padding: '1rem', borderRadius: '10px'}}>
+  This document is a work in progress. If you have any questions or suggestions, please
+    <a href="mailto: newmexicowaterdata@nmt.edu">contact us</a>
+</div>
+
+## Best Practices for Sharing Water Level Data with the New Mexico Water Data Initiative
+This document describes the New Mexico Water Data Initiative’s (WDI) preferred way to receive data related to measurements of the depth to water in groundwater wells.
+
+This document outlines recommended best practices, not enforceable standards. It is understood that not all data providers will be able to report all of the information listed below, or in the exact format recommended.
+
+Following the best practices listed below will allow water level measurement data to be more easily ingestible into the WDI tools. It will also increase consistency across the Water Data Catalog. In addition to this document, we have provided template files that can be used as examples.
+
+If you have questions about this document, feel free to contact us at newmexicowaterdata@nmt.edu 
+
+## File Structure and Format
+### File Format
+Water level  measurements should be provided in two separate files, one with location and well 
+construction data, and one with water level measurements. The site_id field should be provided in both files to allow them to be joined. This reduces the amount of repeated information if there are many measurements for each well. It is preferred that all measurement data be provided in one measurement file even if there are multiple wells.
+
+### File Type
+The  preferred file type is Files should be provided as .csv tables. Excel spreadsheets with multiple 
+tabs are not readable by the Data Catalog’s data API.
+
+### File Names
+The most important things to remember about file naming are to be consistent
+and descriptive in naming your files so that it’s obvious what it contains. The preferred format for file names is as follows:
+
+```
+Agency_Location/Project/Report_DataType_YYYYMMDD_Version
+```
+
+the date could be a date range if data are collected over multiple years as in the example below.
+
+```
+NMBGMR_HealyNetwork_WL_2000_2024_v1
+```
+
+
+## Data Structure and Format
+### Field Names
+Recommended field names for both the location and measurement files are provided in the data 
+dictionary tables below.  
+- Field names (column headers) should be descriptive. 
+- Field names should not include special characters except `_`.  
+- Avoid using spaces and use underscores instead. 
+- Do not begin field names with a number. 
+- All field names should be in the first row. 
+- Use all lowercase letters in field names.
+
+### Formatting of Cells and Measurement Values
+- List one value per cell. Do not put multiple observations, codes, types of data (e.g. date and time), coordinates, 
+  etc. in one cell, dates (`YYYYMMDD`) do not need to be split out. 
+- Do not merge cells. 
+- Measurement values should be reported as depth to water  in feet below ground surface. 
+- If continuous and manual measurements are included in the same table they should be in the same field and differentiated with a measurement_type field; time (`HH:MM AM/PM`); date (`YYYYMMDD`). 
+- Do not include units in the same cells as values.
+
+### Required and Desired Fields
+The data dictionary tables below provide the minimum required fields and additional 
+fields that increase the usefulness of the data. Required fields are necessary  for the data to be usable by WDI. 
+Desired fields greatly increase the value and usability of the data provided. Data providers are welcome to provide 
+additional fields to what are recommended here. **Locations without x,y data should not be included.**
+
+### Units
+Wherever a measurement value is provided, an additional field should be included specifying measurement 
+units as shown in the data dictionaries below and in the example templates.
+
+### Location File Data Dictionary
+See the attached location file template as an example.
+
+| Required Field Name | Description                                                                                                                                                                                                                |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| site_id             | unique identifier for each measurement location. Do not include individual names of well owners or private information. Site_id must be included in both the location and measurement file to allow the data to be joined. |
+| elevation           | well location elevation above mean sea level                                                                                                                                                                               |
+| elevation_units     | units of measurement for elevation value                                                                                                                                                                                   |
+| latitude            | latitude in decimal degrees                                                                                                                                                                                                |
+| longitude           | longitude in decimal degrees                                                                                                                                                                                               |
+| horizontal_datum    | horizontal datum of latitude and longitude values                                                                                                                                                                          |
+| vertical_datum      | vertical datum of the elevation value                                                                                                                                                                                      |
+
+| Desired Field Name   | Description                                                                                                                                                                                                                |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| site_name            | If applicable, the human readable  name for the well. This field can also be used in the measurement table to join the data between the two files.                                                                         |
+| well_depth           | the total depth of the completed well below ground surface                                                                                                                                                                 |
+| well_depth_unit      | unit of measurement for well depth value                                                                                                                                                                                   |
+| hole_depth           | the total depth of the borehole below ground surface                                                                                                                                                                       |
+| hole_depth_unit      | unit of measurement for hole depth value                                                                                                                                                                                   |
+| screen_top           | the top of the screened interval below ground surface                                                                                                                                                                      |
+| screen_top_unit      | unit of measurement for screen top depth value                                                                                                                                                                             |
+| screen_bottom        | the bottom of the screened interval below ground surface                                                                                                                                                                   |
+| screen_bottom_unit   | unit of measurement for screen bottom depth value                                                                                                                                                                          |
+| casing_diameter      | the diameter of the well casing                                                                                                                                                                                            |
+| casing_diameter_unit | unit of measurement for casing diameter value                                                                                                                                                                              |
+| primary_use          | the primary use of the well (see list of valid values below)                                                                                                                                                               |
+| primary_aquifer      | the aquifer in which the well is screened                                                                                                                                                                                  |
+| lithology            | the lithology or formation in which the well is screened                                                                                                                                                                   |
+| ose_pod_id           | NM Office of the State Engineer POD file number from the Water Rights Reporting System                                                                                                                                     |
+| ose_tag_id           | NM Office of the State Engineer Well Identification Tag Program number                                                                                                                                                     |
+| alternate_site_id    | If applicable, an alternate site ID for the location such as a known USGS ID or other organization ID.                                                                                                                     |
+| xy_source            | method of acquiring coordinates (converted from PLSS, GPS, survey)                                                                                                                                                         |
+| elevation_source     | what is the source of the elevation measurement (GPS, survey, DEM, etc)                                                                                                                                                    |
+| location_accuracy    | the accuracy of the location measurement                                                                                                                                                                                   |
+| elevation_accuracy   | the accuracy of the elevation measurement                                                                                                                                                                                  |
+
+
+### Measurement File Data Dictionary
+See the attached measurement file template as an example.
+
+| Required Field Name | Description                                                                                                                                                                                                                |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| site_id             | unique identifier for each measurement location. Do not include individual names of well owners or private information. Site_id must be included in both the location and measurement file to allow the data to be joined. |
+| measurement_date    | date of depth to water measurement (YYYYMMDD)                                                                                                                                                                              |
+| depth_to_water      | depth to water below ground surface                                                                                                                                                                                        |
+| depth_to_water_unit | unit of measurement for depth to water value                                                                                                                                                                               |
+
+
+| Desired Field Name | Description                                                                                                                                    |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| instrument         | What instrument was used to make the measurement (e.g. steel tape, electronic sounder (e-probe), sonic/acoustic, pressure transducer, airline) |
+| measurement_method | manual or continuous measurement                                                                                                               |
+| observation_time   | Time of the measurement                                                                                                                        |
+| measuring_agency   | Agency that made the measurement                                                                                                               |
+| notes              | Optional notes for relevant information regarding the measurement                                                                              |
+
+
+### Primary Use Valid Values
+
+Using the following categories when reporting primary use will increase consistency across the Water Data Catalog.
+
+ - Commercial
+ - Domestic
+ - Industrial
+ - Institutional
+ - Irrigation
+ - Livestock
+ - Mining
+ - Observation
+ - Open, unequipped well
+ - Power generation
+ - Public supply
+ - Shared domestic
+ - Unknown
+ - Unused
+
+
+
