@@ -55,7 +55,7 @@ dictionary tables below.
 
 ### Formatting of Cells and Measurement Values
 - List one value per cell. Do not put multiple observations, codes, types of data (e.g. date and time), coordinates, 
-  etc. in one cell, dates (`YYYYMMDD`) do not need to be split out. 
+  etc. in one cell, dates (`YYYY-MM-DD`) do not need to be split out. 
 - Do not merge cells. 
 - Measurement values should be reported as depth to water  in feet below ground surface. 
 - If continuous and manual measurements are included in the same table they should be in the same field and differentiated with a measurement_type field; time (`HH:MM AM/PM`); date (`YYYYMMDD`). 
@@ -118,26 +118,22 @@ See the attached location file template as an example.
 ### Measurement File Data Dictionary
 See the attached measurement file template as an example.
 
-| Required Field Name | Description                                                                                                                                                                                                                |
-|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| site_id             | unique identifier for each measurement location. Do not include individual names of well owners or private information. Site_id must be included in both the location and measurement file to allow the data to be joined. |
-| measurement_date    | date of depth to water measurement (YYYYMMDD)                                                                                                                                                                              |
-| depth_to_water      | depth to water below ground surface                                                                                                                                                                                        |
-| depth_to_water_unit | unit of measurement for depth to water value                                                                                                                                                                               |
-
-
-| Desired Field Name | Description                                                                                                                                    |
-|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| instrument         | What instrument was used to make the measurement (e.g. steel tape, electronic sounder (e-probe), sonic/acoustic, pressure transducer, airline) |
-| measurement_method | manual or continuous measurement                                                                                                               |
-| observation_time   | Time of the measurement                                                                                                                        |
-| measuring_agency   | Agency that made the measurement                                                                                                               |
-| notes              | Optional notes for relevant information regarding the measurement                                                                              |
+| Field Name | Required or Desired |Description                                                                                                                                                                                                                                |
+|---------------------|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| site_id             |**required**     | Unique identifier for each measurement location. Do not include individual names of well owners or private information. **Site_id must be included in both the location and measurement file to allow the data to be joined.** |
+| measurement_date    |**required**     | Date of depth to water measurement (YYYY-MM-DD).                                                                                                                                                                              |
+| depth_to_water      |**required**     | Depth to water below ground surface. The preferred accuracy is to 0.01 feet.                                                                                                                                                                                         |
+| depth_to_water_unit |**required**     | Unit of measurement for depth to water value. The preferred units are in feet below ground surface.                                                                                                                                                                               |
+| measurement_type         |desired          | What instrument was used to make the measurement (e.g. steel tape, electronic sounder (e-probe), sonic/acoustic, pressure transducer, airline). |
+| measurement_method |desired          | Indicate manual or continuous measurement. Were discrete measurements made by a person visiting the site during a field event (e-probe, steel tape), or are measurements collected continuously by an instrument installed in the well (pressure transducer, acoustic sounder).                                                                                                              |
+| observation_time   |desired          | Time of the measurement.                                                                                                                        |
+| measuring_agency   |desired          | Agency that made the measurement.                                                                                                               |
+| notes              |desired          | Optional notes for relevant information regarding the measurement.                                                                              |
 
 
 ### Primary Use Valid Values
 
-Using the following categories when reporting primary use will increase consistency across the Water Data Catalog.
+Using the following categories when reporting primary use will increase consistency across the Water Data Catalog (please select one).  
 
  - Commercial
  - Domestic
