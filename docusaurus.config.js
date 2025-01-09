@@ -13,10 +13,10 @@ const config = {
   favicon: 'img/nmwdi_favicon.png',
 
   // Set the production url of your site here
-  url: 'https://developer.newmexicowaterdata.org',
+  url: 'https://developer2.newmexicowaterdata.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/devosaurus/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
