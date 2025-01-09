@@ -63,9 +63,9 @@ const config = {
         //   onInlineAuthors: 'warn',
         //   onUntruncatedBlogPosts: 'warn',
         // },
-        // theme: {
-        //   customCss: './src/css/custom.css',
-        // },
+        theme: {
+          customCss: './src/css/custom.css',
+        },
       }),
     ],
   ],
@@ -141,10 +141,10 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} NMWDI. Built with Docusaurus.`,
       },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
+      // prism: {
+      //   theme: prismThemes.github,
+      //   darkTheme: prismThemes.dracula,
+      // },
       algolia: {
         // The application ID provided by Algolia
         appId: '45AGT1V0LQ',
