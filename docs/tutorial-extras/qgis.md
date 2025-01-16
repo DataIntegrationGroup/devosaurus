@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-### QGIS integration
+# QGIS integration
 
 Plot ST2 SensorThing locations directly in QGIS
 

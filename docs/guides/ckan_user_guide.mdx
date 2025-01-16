@@ -1,0 +1,117 @@
+# New Mexico Water Data Catalog User Guide
+
+:::warning
+
+This guide is a work in progress. Please check back for updates.
+
+:::
+
+
+## Introduction
+The New Mexico Water Data Catalog [catalog.newmexicowaterdata.org](https://catalog.newmexicowaterdata.org) is 
+developed in a free, open-source, 
+data platform called Comprehensive Knowledge Archive Network (CKAN).
+
+This user guide has been developed  for members of organizations that contribute to the New Mexico Water Data Catalog.  
+You do not need to be a member of an organization, or have a login or password to search the data catalog, and download data.
+
+**In order to add new data  to the Data Catalog, you must be a member of an organization and  have login credentials.
+The Water Data Team at  the New Mexico Bureau of Geology and Mineral Resources can make a page for your organization,
+and assign you login credentials. Please contact us:**
+
+- New Mexico Water Data newmexicowaterdata@nmt.edu
+- Rachel Hobbs rachel.hobbs@nmt.edu
+- Cris Morton cristopher.morton@nmt.edu
+
+This user guide covers using CKAN’s web interface to organize, publish and find data. 
+CKAN also has a powerful API (machine interface), which makes it easy to develop extensions and links 
+with other information systems. The API is documented in [API guide](https://docs.ckan.org/en/2.9/api/index.html).
+
+## What is CKAN?
+CKAN is a tool for making open data websites. (Think of a content management system like WordPress – but for data, 
+instead of pages and blog posts.) It helps you manage and publish collections of data. It is used by national and 
+local governments, research institutions, and other organizations who collect a lot of data.
+
+Once your data is published, users can use its faceted search features to browse and find the data they need, and 
+preview it using maps, graphs and tables – whether they are developers, journalists, researchers, NGOs, citizens,
+or even your own staff.
+
+## Datasets and Resources
+For CKAN purposes, data is published in units called “datasets.” A dataset is a parcel of data – for example, it 
+could be the crime statistics for a region, the spending figures for a government department, or temperature 
+readings from various weather stations. When users search for data, the search results they see will be individual datasets.
+
+A dataset contains two things:
+
+* Information or “metadata” about the data. For example, the title and publisher, date, what formats it is available
+  in, what license it is released under, etc.
+
+* A number of “resources”, which hold the data itself. CKAN does not mind what format the data is in. A resource can
+ be a CSV or Excel spreadsheet, XML file, PDF document, image file, linked data in RDF format, etc. CKAN can store the
+ resource internally, or store it simply as a link, the resource itself being elsewhere on the web. A dataset can
+ contain any number of resources. For example, different resources might contain the data for different years, or
+ they might contain the same data in different formats.
+
+:::note
+On early CKAN versions, datasets were called “packages” and this name has stuck in some places, specially internally
+and on API calls. Package has exactly the same meaning as “dataset.”
+
+:::
+
+
+## Users, Organizations and Authorization
+Normally (depending on the site setup), login is not needed to search for and find data, but is needed for all
+publishing functions: datasets can be created, edited, etc by users with the appropriate permissions. New users may
+be invited by existing system administrators..
+
+Normally, each dataset is owned by an “organization.” A CKAN instance can have any number of organizations. For
+example, if CKAN is being used as a data portal by a national government, the organizations might be different
+government departments, each of which publishes data. Each organization can have its own workflow and authorizations,
+allowing it to manage its own publishing process.
+
+An organization’s administrators can add individual users to it, with different roles depending on the level of
+authorization needed. A user in an organization can create a dataset owned by that organization. In the default
+setup, this dataset is initially private, and visible only to other users in the same organization. When it is ready
+for publication, it can be published at the press of a button. This may require a higher authorization level within
+the organization.
+
+
+
+## Using CKAN
+
+### Registering and logging in
+Registration for the New Mexico Water Data Initiative CKAN data catalog is currently available by invite only.
+
+:::note
+Registration is needed for most publishing features and for personalization features, such as “following” datasets.
+:::
+
+:::tip
+Registration is **not** needed to search for and download data.
+:::
+
+### Features for publishers
+
+#### Adding a new dataset
+1. You can access CKAN’s “Create dataset” screen in two ways.
+    1. Select the “Data” link at the top of any page. From this, above the search box, select the “Add Dataset” button.
+    2. Alternatively, select the “organizations” link at the top of a page. Now select the page for the organization
+   that you belong to. Provided that you are a member of this organization, you can now select the “Add Dataset” button
+   above the search box.
+2. CKAN will ask for the following metadata. (The actual data will be added in step 4.) Having robust metadata is
+important for helping people to understand your data, putting it in context, and making it easier to find.
+
+   ![create dataset](/img/ckan_user_guide/create_dataset.png)
+
+    :::note
+
+    It is good practice to include, as much metadata as possible when creating the dataset. You should ensure that
+    you choose the correct organization for the dataset. You can edit or add to the other fields later.
+
+    :::
+
+3. When you have filled in the information on this page, select the “Next: Add Data” button. (Alternatively select
+“Cancel” to discard the information filled in.)
+4. CKAN will display the “Add data” screen.
+
+![add data](/img/ckan_user_guide/add_data.png)
