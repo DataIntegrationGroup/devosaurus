@@ -5,14 +5,14 @@ sidebar_position: 8
 # Data Sources
 
 ## Data Integration Sources
-| Name                        | Description             | URL                                                                                                                    |
-|-----------------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------|
-| NMAquifer                   | New Mexico Aquifer Data | [https://waterdata.nmt.edu](https://waterdata.nmt.edu)                                                                 |
-| [ST2](#agencies-in-st2-api) | SensorThings API        | [https://st2.newmexicowaterdata.org](https://st2.newmexicowaterdata.org)                                               |
-| WQP                         | Water Quality Portal    | [https://www.waterqualitydata.us](https://www.waterqualitydata.us)                                                     |
-| NWIS                        | USGS NWIS               | [https://waterdata.usgs.gov/nwis](https://waterdata.usgs.gov/nwis)                                                     |
-| BoR                         | Bureau of Reclamation   | [https://data.usbr.gov](https://data.usbr.gov)                                                                         |
-| ISC Seven Rivers            | NMOSE ISC Seven Rivers  | [https://nmisc-wf.gladata.com/api/getMonitoringPoints.ashx](https://nmisc-wf.gladata.com/api/getMonitoringPoints.ashx) |
+| Name                        | Description                  | URL                                                                                                                    |
+|-----------------------------|------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| NMBGMR                      | New Mexico Bureau of Geology | [https://waterdata.nmt.edu](https://waterdata.nmt.edu)                                                                 |
+| [ST2](#agencies-in-st2-api) | SensorThings API             | [https://st2.newmexicowaterdata.org](https://st2.newmexicowaterdata.org)                                               |
+| WQP                         | Water Quality Portal         | [https://www.waterqualitydata.us](https://www.waterqualitydata.us)                                                     |
+| NWIS                        | USGS NWIS                    | [https://waterdata.usgs.gov/nwis](https://waterdata.usgs.gov/nwis)                                                     |
+| BoR                         | Bureau of Reclamation        | [https://data.usbr.gov](https://data.usbr.gov)                                                                         |
+| ISC Seven Rivers            | NMOSE ISC Seven Rivers       | [https://nmisc-wf.gladata.com/api/getMonitoringPoints.ashx](https://nmisc-wf.gladata.com/api/getMonitoringPoints.ashx) |
 
 
 ## Agencies in ST2 API
@@ -23,3 +23,32 @@ sidebar_position: 8
 | OSE-Roswell District | New Mexico Office of the State Engineer Roswell District Office | [Locations?$filter=properties/agency eq 'OSE-Roswell'](https://st2.newmexicowaterdata.org/FROST-Server/v1.1/Locations?$filter=properties/agency%20eq%20%27OSE-Roswell%27) |
 | CABQ                 | City of Albuquerque                                             | [Locations?$filter=properties/agency eq 'CABQ'](https://st2.newmexicowaterdata.org/FROST-Server/v1.1/Locations?$filter=properties/agency%20eq%20%27CABQ%27)               |
 | EBWPC                | Estancia Basin Water Planning Committee                         | [Locations?$filter=properties/agency eq 'EBWPC'](https://st2.newmexicowaterdata.org/FROST-Server/v1.1/Locations?$filter=properties/agency%20eq%20%27EBWPC%27)             |
+
+
+## Application Status
+| Name        | Data Integration Engine | Weaver             |
+|-------------|-------------------------|--------------------|
+| NMBGMR      | :white_check_mark:      | :white_check_mark: |
+| BernCo      | :white_check_mark:      | :white_check_mark: |
+| PVACD       | :white_check_mark:      | :white_check_mark: |
+| OSE-Roswell | :white_check_mark:      | :x:                |
+| CABQ        | :white_check_mark:      | :x:                |
+| EBWPC       | :white_check_mark:      | :x:                |
+| WQP         | :white_check_mark:      | :x:                |
+| NWIS        | :white_check_mark:      | :white_check_mark: |
+| BoR         | :white_check_mark:      | :x:                |
+
+
+## Water Data Types
+| Name             | Groundwater Levels | Water Quality      |
+|------------------|--------------------|--------------------|
+| NMBGMR           | :white_check_mark: | :white_check_mark: |
+| BernCo           | :white_check_mark: | :x:                |
+| PVACD            | :white_check_mark: | :x:                |
+| OSE-Roswell      | :white_check_mark: | :x:                |
+| CABQ             | :white_check_mark: | :x:                |
+| EBWPC            | :white_check_mark: | :x:                |
+| WQP              | :x:                | :white_check_mark: |
+| NWIS             | :white_check_mark: | :x:                |
+| BoR              | :x:                | :white_check_mark: |
+| ISC Seven Rivers | :white_check_mark: | :white_check_mark: |
